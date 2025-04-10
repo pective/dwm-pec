@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 # Change this depending on your battery in /sys/class/power_supply/
 battery="BAT0";
