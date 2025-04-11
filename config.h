@@ -75,26 +75,26 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *rofi2[]    = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *files[]    = { "dbus-launch", "thunar", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_space,  spawn,          SHCMD ("~/.local/bin/rofi2")},
-	{ MODKEY,	                XK_Return, spawn,          SHCMD ("alacritty")},
-	{ MODKEY,			XK_b,	   spawn,	   SHCMD ("firefox")},
-	{ MODKEY,			XK_e,	   spawn,	   {.v = files} },
-	{ MODKEY,			XK_s,	   spawn,	   SHCMD ("flameshot gui")},
-	{ MODKEY|ShiftMask,		XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_space,  spawn,          SHCMD ("~/.config/rofi/scripts/launcher_t2")},
+  { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD ("~/.config/rofi/scripts/powermenu_t1")},
+	{ MODKEY,	                      XK_Return, spawn,          SHCMD ("alacritty")},
+	{ MODKEY,			                  XK_b,	     spawn,	         SHCMD ("firefox")},
+	{ MODKEY,			                  XK_e,	     spawn,	         {.v = files} },
+	{ MODKEY,		                  	XK_s,	     spawn,	         SHCMD ("flameshot gui")},
+	{ MODKEY|ShiftMask,		          XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,		XK_Return, zoom,	   {0} },
+	{ MODKEY|ShiftMask,		          XK_Return, zoom,	         {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY, 	                XK_c,      killclient,     {0} },
+	{ MODKEY, 	                    XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -120,7 +120,7 @@ static const Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkButton,			0,				Button1,		spawn,			SHCMD ("~/.local/bin/rofi2")},
+	{ ClkButton,			      0,				      Button1,		    spawn,			    SHCMD ("~/.local/bin/rofi2")},
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
