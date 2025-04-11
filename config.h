@@ -11,6 +11,7 @@ static const unsigned int gappx     = 8;        /* gaps between windows */
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const char buttonbar[]       = "󰣇";
 static const char *fonts[]          = { "MonaspiceNe Nerd Font:size=14" };
 static const char dmenufont[]       = "MonaspiceNe Nerd Font:size=12";
 static const char col_gray1[]       = "#1e2127";
@@ -119,6 +120,7 @@ static const Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
+	{ ClkButton,			0,				Button1,		spawn,			SHCMD ("~/.local/bin/rofi2")},
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
