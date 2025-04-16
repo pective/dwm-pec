@@ -14,11 +14,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char buttonbar[]       = "󰣇";
 static const char *fonts[]          = { "MonaspiceNe Nerd Font:size=14" };
 static const char dmenufont[]       = "MonaspiceNe Nerd Font:size=12";
-static const char col_gray1[]       = "#1e2127";
-static const char col_gray2[]       = "#abb2bf";
-static const char col_gray3[]       = "#abb2bf";
+static const char col_gray1[]       = "#2e3440";
+static const char col_gray2[]       = "#d8dee9";
+static const char col_gray3[]       = "#d8dee9";
 static const char col_gray4[]       = "#ffffff";
-static const char col_cyan[]        = "#282c34";
+static const char col_cyan[]        = "#4c566a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_cyan },
@@ -39,7 +39,8 @@ static const Rule rules[] = {
 };
 
 static const char *const autostart[] = {
-	"flameshot", NULL,
+	"dbus-update-activation-environment", "--systemd", "--all", NULL,
+  "flameshot", NULL,
 	"nm-applet", NULL,
 	"dunst", NULL,
 	"picom", NULL,
