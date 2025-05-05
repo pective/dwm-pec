@@ -14,11 +14,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char buttonbar[]       = "󰣇";
 static const char *fonts[]          = { "MonaspiceNe Nerd Font:size=14" };
 static const char dmenufont[]       = "MonaspiceNe Nerd Font:size=12";
-static const char col_gray1[]       = "#282c34";
-static const char col_gray2[]       = "#bbc2cf";
-static const char col_gray3[]       = "#bbc2cf";
+static const char col_gray1[]       = "#2e3440";
+static const char col_gray2[]       = "#d8dee9";
+static const char col_gray3[]       = "#d8dee9";
 static const char col_gray4[]       = "#ffffff";
-static const char col_cyan[]        = "#373d48";
+static const char col_cyan[]        = "#4c566a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_cyan },
@@ -80,7 +80,7 @@ static const char *files[]    = { "dbus-launch", "thunar", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_space,  spawn,          SHCMD ("~/.config/rofi/scripts/launcher_t1")},
+	{ MODKEY,                       XK_space,  spawn,          SHCMD ("~/.config/rofi/scripts/launcher_t4")},
   { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD ("~/.config/rofi/scripts/powermenu_t1")},
 	{ MODKEY,	                      XK_Return, spawn,          SHCMD ("alacritty")},
 	{ MODKEY,			                  XK_b,	     spawn,	         SHCMD ("firefox")},
